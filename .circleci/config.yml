@@ -61,13 +61,13 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Docker Image
-          command: "docker build -t ghcr.io/icaksh/shipping-service:latest ./shipping-service/"
+          command: "docker build -t ghcr.io/faqihyugos/shipping-service:latest ./shipping-service/"
       - run:
           name: Login to ghcr.io
           command: "echo $GITHUB_ACCESS_TOKEN | docker login ghcr.io -u icaksh --password-stdin"
       - run:
           name: Pushing Image to ghcr.io
-          command: "docker push ghcr.io/icaksh/shipping-service:latest"
+          command: "docker push ghcr.io/faqihyugos/shipping-service:latest"
 
 workflows:
 
